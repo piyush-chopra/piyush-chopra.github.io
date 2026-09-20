@@ -2,7 +2,7 @@
 
 A static portfolio for Piyush Chopra, Senior Software Engineer focused on full-stack engineering and agentic AI.
 
-**Live website:** https://booleandev-io.github.io/
+**Live website:** https://piyush-chopra.github.io/
 
 ## Local preview
 
@@ -26,7 +26,7 @@ Content remains readable and links work without JavaScript. Project filters and 
 
 ## Publishing
 
-GitHub Pages publishes the root of `main` in `BooleanDev-IO/BooleanDev-IO.github.io`. The `.nojekyll` file bypasses Jekyll. Push changes to `main` and wait for the Pages deployment to finish.
+GitHub Pages publishes the root of `main` in `piyush-chopra/piyush-chopra.github.io`. The `.nojekyll` file bypasses Jekyll. Push changes to `main` and wait for the Pages deployment to finish.
 
 ## Updating content
 
@@ -45,11 +45,11 @@ npm ci
 npm test
 ```
 
-Google Chrome is used by default. Set `CHROMIUM_PATH` to use another Chromium executable. To check a deployment, run `PORTFOLIO_BASE=https://booleandev-io.github.io npm test`. Generated screenshots and results are written to the ignored `artifacts/` directory. The checks include axe WCAG A/AA audits; these supplement manual accessibility review.
+Google Chrome is used by default. Set `CHROMIUM_PATH` to use another Chromium executable. To check a deployment, run `PORTFOLIO_BASE=https://piyush-chopra.github.io npm test`. Generated screenshots and results are written to the ignored `artifacts/` directory. The checks include axe WCAG A/AA audits; these supplement manual accessibility review.
 
 To regenerate the social preview from its HTML source, run `npm run social-card` while the local server is running. None of these development dependencies are loaded by the website.
 
 ## Credits
 
 Manrope is bundled under the SIL Open Font License; see `assets/fonts/OFL.txt`.
-The Foundry Office screenshot shows its actual interface with example data. Character graphics within that screenshot are by Penzilla Design; see the [Foundry Office third-party notices](https://github.com/BooleanDev-IO/foundry-office/blob/main/THIRD_PARTY_NOTICES.md).
+The Foundry Office screenshot shows its actual interface with example data. Character graphics within that screenshot are by Penzilla Design; see the [Foundry Office third-party notices](https://github.com/piyush-chopra/foundry-office/blob/main/THIRD_PARTY_NOTICES.md).

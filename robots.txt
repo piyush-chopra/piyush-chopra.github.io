@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /scripts/
-Sitemap: https://booleandev-io.github.io/sitemap.xml
+Sitemap: https://piyush-chopra.github.io/sitemap.xml
