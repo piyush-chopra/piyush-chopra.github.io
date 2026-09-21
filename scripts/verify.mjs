@@ -88,6 +88,21 @@ try {
     if (!(await page.locator(`#${id} h3`).isVisible()))
       throw Error(`Resume project missing: ${id}`);
   }
+  const previewLinks = {
+    hawkai: "https://www.hawkai.in/",
+    tms: "https://assist.gentari.co.in/",
+    empower: "https://empower.gentari.co.in/",
+    epm: "https://appraisal.gentari.co.in/",
+    "chai-point": "https://www.chaipoint.com/",
+    "intranet-agent": "https://gia.gentari.co.in/",
+    planetskool: "https://www.planetskool.world/",
+    tracemind: "https://echo.gentari.co.in/",
+  };
+  for (const [id, url] of Object.entries(previewLinks)) {
+    const link = page.locator(`#${id} .project-preview`);
+    if (!(await link.isVisible()) || (await link.getAttribute("href")) !== url)
+      throw Error(`Project preview incorrectly mapped: ${id}`);
+  }
   await page.locator("#tms summary").click();
   if (!(await page.locator("#tms details").evaluate((el) => el.open)))
     throw Error("New project contribution disclosure failed");

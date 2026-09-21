@@ -36,7 +36,7 @@ GitHub Pages publishes the root of `main` in `piyush-chopra/piyush-chopra.github
 
 The featured Foundry Office project is followed by 18 resume-based project entries. The AI and platform filters cover the entire collection. Each entry describes Piyush's specific contribution; prototypes and contributions to existing products are identified explicitly. Approximate impact figures are taken from the resume, and technology tags are limited to what it supports for that project.
 
-Project preview links are supplied by Piyush. Do not infer a demo URL from a product name or link an enterprise project to an unrelated public product. Until a preview is supplied, the project remains a descriptive entry without a preview button.
+Eight project links are supplied by Piyush: HawkAI, TMS, Empower, EPM, Chai Point, Intranet Document Reviewer, PlanetSkool, and TraceMind. Public websites and application portals have distinct link labels. Do not infer a demo URL from a product name or link an enterprise project to an unrelated public product. Until a preview is supplied, the project remains a descriptive entry without a preview button.
 
 ## Updating content
 

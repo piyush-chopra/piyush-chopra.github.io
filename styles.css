@@ -1586,3 +1586,8 @@ small,
 .project-card-summary details {
   margin-top: auto;
 }
+
+.project-preview {
+  width: fit-content;
+  margin-top: 12px;
+}
