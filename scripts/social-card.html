@@ -4,70 +4,82 @@
     <meta charset="utf-8" />
     <meta name="robots" content="noindex" />
     <title>Portfolio social preview</title>
+    <link rel="stylesheet" href="../styles.css" />
     <style>
-      @font-face {
-        font-family: Manrope;
-        src: url("../assets/fonts/manrope.woff2");
-      }
-      * {
-        box-sizing: border-box;
+      html {
+        color-scheme: light;
       }
       body {
-        margin: 0;
-        background: #203b2e;
-        color: #edf2e6;
-        font-family: Manrope, sans-serif;
         width: 1200px;
         height: 630px;
-        padding: 65px 75px;
-        background-image:
-          linear-gradient(#ffffff05 1px, transparent 1px),
-          linear-gradient(90deg, #ffffff05 1px, transparent 1px);
-        background-size: 35px 35px;
+        padding: 52px 64px;
+        background: #f5f5f7;
+        color: #1d1d1f;
       }
       .top {
         display: flex;
         justify-content: space-between;
-        font-size: 18px;
-        color: #b5c7a5;
+        align-items: center;
+        font-size: 17px;
+        color: #626268;
       }
       .name {
-        font-size: 26px;
-        font-weight: 700;
-        color: #edf2e6;
+        font-size: 23px;
+        font-weight: 600;
+        color: #1d1d1f;
+      }
+      .intelligence-art {
+        position: absolute;
+        top: 106px;
+        right: 50px;
+        transform: scale(1.2);
       }
       h1 {
-        font-size: 79px;
+        font-size: 73px;
+        letter-spacing: -0.055em;
         line-height: 1.08;
-        letter-spacing: -5px;
-        font-weight: 500;
-        margin: 72px 0 30px;
+        margin-top: 92px;
+        text-align: left;
+        max-width: 940px;
       }
       h1 span {
-        color: #cbe799;
+        color: #626268;
       }
       .bottom {
+        border-top: 1px solid #dcdce3;
+        padding-top: 27px;
+        margin-top: 54px;
         display: flex;
         justify-content: space-between;
-        align-items: end;
-        font-size: 18px;
-        color: #c1ceb5;
+        align-items: center;
+        font-size: 17px;
+        color: #626268;
       }
-      .mark {
-        font-size: 68px;
-        letter-spacing: -5px;
-        color: #cbe799;
+      .specialty {
+        color: #673dcc;
       }
     </style>
   </head>
   <body>
     <div class="top">
-      <span class="name">Piyush Chopra</span><span>piyush-chopra / Portfolio</span>
+      <span class="name">Piyush Chopra</span
+      ><span>piyush-chopra.github.io</span>
     </div>
-    <h1>Complex systems.<br /><span>Useful products.</span></h1>
+    <div class="intelligence-art" aria-hidden="true">
+      <div class="spectrum-halo"></div>
+      <div class="spectrum-sculpture">
+        <i class="spectrum-loop loop-one"></i
+        ><i class="spectrum-loop loop-two"></i
+        ><i class="spectrum-loop loop-three"></i
+        ><span class="spectrum-core"></span>
+      </div>
+    </div>
+    <h1>
+      Intelligence,<br />engineered.<br /><span>Products, made human.</span>
+    </h1>
     <div class="bottom">
-      <div>Senior Software Engineer<br />Full-Stack & Agentic AI</div>
-      <span class="mark">pc.</span>
+      <span>Senior Software Engineer</span
+      ><span class="specialty">Full-Stack & Agentic AI</span>
     </div>
   </body>
 </html>

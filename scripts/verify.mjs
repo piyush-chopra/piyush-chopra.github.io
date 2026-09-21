@@ -117,13 +117,44 @@ try {
     ];
     const sizes = nodes.map((n) => getComputedStyle(n).fontSize);
     nodes.forEach(
-      (n, i) => (n.style.fontSize = `${parseFloat(sizes[i]) * 1.5}px`),
+      (n, i) => (n.style.fontSize = `${parseFloat(sizes[i]) * 2}px`),
     );
   });
   if (
     await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)
   )
-    throw Error("Large-text overflow");
+    throw Error("200% text overflow");
+  await page.screenshot({ path: `${out}/large-text.png`, fullPage: true });
+  await page.reload();
+  // Preference fallbacks and keyboard access exercise the new visual layers.
+  const cdp = await context.newCDPSession(page);
+  for (const feature of ["prefers-reduced-transparency", "prefers-contrast"]) {
+    await cdp.send("Emulation.setEmulatedMedia", {
+      features: [
+        {
+          name: feature,
+          value: feature === "prefers-contrast" ? "more" : "reduce",
+        },
+      ],
+    });
+    const material = await page
+      .locator(".site-header")
+      .evaluate((el) => getComputedStyle(el).backdropFilter);
+    if (material !== "none")
+      throw Error(`${feature}: navigation is still translucent`);
+  }
+  await cdp.send("Emulation.setEmulatedMedia", { features: [] });
+  await cdp.detach();
+  await page.goto(base);
+  await page.keyboard.press("Tab");
+  if (
+    !(await page
+      .locator(".skip-link")
+      .evaluate((el) => el === document.activeElement))
+  )
+    throw Error("Keyboard skip link is not first");
+  await page.keyboard.press("Enter");
+  if (!page.url().endsWith("#main")) throw Error("Keyboard skip link failed");
   const noJS = await browser.newContext({
     javaScriptEnabled: false,
     viewport: { width: 390, height: 844 },
@@ -150,7 +181,7 @@ try {
   if (errors.length || badResponses.length)
     throw Error(JSON.stringify({ errors, badResponses }));
   results.push(
-    "Filters, details, theme persistence, clipboard, anchors, reduced motion, large text, no-JS content/contact, and 404 page passed.",
+    "Filters, details, theme persistence, clipboard, anchors, reduced motion, 200% text, keyboard skip link, reduced transparency, increased contrast, no-JS content/contact, and 404 page passed.",
   );
   await writeFile(
     `${out}/results.json`,

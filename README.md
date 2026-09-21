@@ -2,6 +2,10 @@
 
 A static portfolio for Piyush Chopra, Senior Software Engineer focused on full-stack engineering and agentic AI.
 
+The visual direction pairs Apple-inspired system typography and silver/graphite surfaces with an original Siri-inspired spectrum sculpture. Project content stays on solid surfaces; the floating navigation uses a restrained translucent treatment. Both appearances follow system preferences by default. See [design decisions and HIG references](docs/design.md).
+
+![Portfolio preview](assets/social-card.png)
+
 **Live website:** https://piyush-chopra.github.io/
 
 ## Local preview
@@ -19,7 +23,7 @@ Open http://127.0.0.1:4173.
 - `index.html`: semantic, indexable page content, project summaries, experience, contact, and structured metadata.
 - `styles.css`: responsive layouts, light/dark themes, reduced-motion and print styles.
 - `script.js`: progressive enhancements for theme switching, project filtering, email copying, and active navigation.
-- `assets/`: self-hosted font, project screenshot, favicon, and social preview image.
+- `assets/`: project screenshot, favicon, social preview image, and legacy licensed font asset.
 - `404.html`, `robots.txt`, `sitemap.xml`: hosting and discovery essentials.
 
 Content remains readable and links work without JavaScript. Project filters and clipboard controls appear only when supported. There are no analytics scripts, contact-form backend, or third-party font requests.
@@ -36,7 +40,7 @@ Professional experience and approximate outcomes were supplied in Piyush's Septe
 
 ## Checks
 
-The site is checked at mobile, tablet, and desktop widths; in both themes; with reduced motion and JavaScript disabled; and for navigation, filtering, details, clipboard handling, missing local assets, and basic accessibility. Screenshots used during verification are kept outside the published repository.
+The site is checked at mobile, tablet, and desktop widths; in both themes; with 200% text, increased contrast, reduced transparency, reduced motion, and JavaScript disabled; and for navigation, filtering, details, clipboard handling, missing local assets, and basic accessibility. Screenshots used during verification are kept outside the published repository.
 
 With the local preview server running, install the optional development tools and run the browser checks:
 
@@ -51,5 +55,5 @@ To regenerate the social preview from its HTML source, run `npm run social-card`
 
 ## Credits
 
-Manrope is bundled under the SIL Open Font License; see `assets/fonts/OFL.txt`.
+The site uses the platform system font. The previously used Manrope asset remains bundled under the SIL Open Font License; see `assets/fonts/OFL.txt`.
 The Foundry Office screenshot shows its actual interface with example data. Character graphics within that screenshot are by Penzilla Design; see the [Foundry Office third-party notices](https://github.com/piyush-chopra/foundry-office/blob/main/THIRD_PARTY_NOTICES.md).

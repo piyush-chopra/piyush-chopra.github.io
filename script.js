@@ -1,4 +1,5 @@
 const themeButton = document.querySelector(".theme-button");
+themeButton.hidden = false;
 const root = document.documentElement;
 const preference = window.matchMedia("(prefers-color-scheme: dark)");
 function currentTheme() {
@@ -8,6 +9,8 @@ function updateThemeLabel() {
   const next = currentTheme() === "dark" ? "light" : "dark";
   themeButton.setAttribute("aria-label", `Switch to ${next} theme`);
   themeButton.title = `Switch to ${next} theme`;
+  document.querySelector('meta[name="theme-color"]').content =
+    currentTheme() === "dark" ? "#0b0b0f" : "#f5f5f7";
 }
 try {
   const saved = localStorage.getItem("portfolio-theme");

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f6f7f2" />
+    <meta name="theme-color" content="#f5f5f7" />
     <title>
       Piyush Chopra — Senior Software Engineer · Full-Stack & Agentic AI
     </title>
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Piyush Chopra — Engineering useful systems"
+      content="Piyush Chopra — Intelligence, engineered"
     />
     <meta
       property="og:description"
@@ -33,13 +33,6 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link
-      rel="preload"
-      href="assets/fonts/manrope.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
     <script type="application/ld+json">
@@ -72,7 +65,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Piyush Chopra, home"
-        ><span class="monogram" aria-hidden="true">pc<span>.</span></span
+        ><span class="monogram" aria-hidden="true">pc</span
         ><span
           >Piyush Chopra<span class="brand-sub">SOFTWARE ENGINEER</span></span
         ></a
@@ -87,6 +80,7 @@
       <button
         class="theme-button"
         type="button"
+        hidden
         aria-label="Switch to dark theme"
         title="Change color theme"
       >
@@ -101,13 +95,22 @@
         id="home"
         aria-labelledby="hero-title"
       >
+        <div class="intelligence-art" aria-hidden="true">
+          <div class="spectrum-halo"></div>
+          <div class="spectrum-sculpture">
+            <i class="spectrum-loop loop-one"></i
+            ><i class="spectrum-loop loop-two"></i
+            ><i class="spectrum-loop loop-three"></i
+            ><span class="spectrum-core"></span>
+          </div>
+        </div>
         <div class="hero-copy">
           <p class="eyebrow">
             <span class="status-dot" aria-hidden="true"></span> SENIOR SOFTWARE
             ENGINEER · INDIA
           </p>
           <h1 id="hero-title">
-            Complex systems.<br /><span>Useful products.</span>
+            Intelligence, engineered.<br /><span>Products, made human.</span>
           </h1>
           <p class="hero-intro">
             I’m Piyush. I build
@@ -126,54 +129,13 @@
             ><span>Open to international opportunities</span>
           </div>
         </div>
-        <div
-          class="systems-art"
-          aria-label="Engineering across interfaces, intelligent workflows, and infrastructure"
-        >
-          <div class="art-top">
-            <span class="tiny-label">THE SPACE I BUILD IN</span
-            ><span class="art-mark" aria-hidden="true">⌘</span>
-          </div>
-          <div class="system-layers" aria-hidden="true">
-            <div class="system-layer layer-one">
-              <span class="layer-number">01</span>
-              <div>
-                <strong>Interfaces</strong
-                ><small>WEB · MOBILE · REAL-TIME</small>
-              </div>
-              <span class="layer-icon">↗</span>
-            </div>
-            <div class="layer-connector">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="system-layer layer-two">
-              <span class="layer-number">02</span>
-              <div>
-                <strong>Intelligence</strong
-                ><small>AGENTS · RAG · WORKFLOWS</small>
-              </div>
-              <span class="layer-icon">✳</span>
-            </div>
-            <div class="layer-connector">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="system-layer layer-three">
-              <span class="layer-number">03</span>
-              <div>
-                <strong>Infrastructure</strong
-                ><small>APIs · DATA · OBSERVABILITY</small>
-              </div>
-              <span class="layer-icon">⌁</span>
-            </div>
-          </div>
-          <div class="art-bottom">
-            <span>Architecture → production</span
-            ><span class="art-coordinate">PC / 2026</span>
-          </div>
+        <div class="hero-disciplines" aria-label="Engineering focus">
+          <span>Interfaces</span><span>Intelligence</span
+          ><span>Infrastructure</span>
         </div>
       </section>
       <div class="practice-strip section-shell">
-        <span>BUILT ACROSS THE STACK</span>
+        <span>FROM IDEA TO EVERYDAY IMPACT</span>
         <p>
           Agentic AI <i>/</i> React <i>/</i> Django <i>/</i> Flutter
           <i>/</i> Azure
@@ -186,7 +148,7 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">01 / SELECTED WORK</p>
+            <p class="eyebrow">SELECTED WORK</p>
             <h2 id="work-title">Built to solve<br />something real.</h2>
           </div>
           <p>
@@ -196,11 +158,6 @@
         </div>
         <article class="featured-project">
           <div class="featured-image">
-            <div class="window-chrome">
-              <span><i></i><i></i><i></i></span
-              ><span>FOUNDRY OFFICE / WORKSPACE</span
-              ><span aria-hidden="true">↗</span>
-            </div>
             <a
               href="https://github.com/piyush-chopra/foundry-office"
               aria-label="Explore Foundry Office on GitHub"
@@ -374,6 +331,15 @@
             </div>
           </article>
           <article class="project-card compact-project" data-category="ai">
+            <div class="card-visual document-visual" aria-hidden="true">
+              <div class="document-sheet">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="document-answer">
+                A little clarity.<br /><strong>A lot less searching.</strong>
+              </div>
+              <span class="visual-label">KNOWLEDGE, WITH CONTEXT.</span>
+            </div>
             <div class="card-body">
               <p class="project-category">DOCUMENT INTELLIGENCE · GENTARI</p>
               <h3>GIA & document agents</h3>
@@ -451,7 +417,7 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">02 / EXPERIENCE</p>
+            <p class="eyebrow">EXPERIENCE</p>
             <h2 id="experience-title">
               Ownership, from<br />idea to production.
             </h2>
@@ -564,7 +530,7 @@
         aria-labelledby="about-title"
       >
         <div class="about-intro">
-          <p class="eyebrow">03 / A LITTLE MORE CONTEXT</p>
+          <p class="eyebrow">BEHIND THE WORK</p>
           <h2 id="about-title">
             A systems mindset.<br />A product perspective.
           </h2>
@@ -632,7 +598,7 @@
           </p>
           <div class="contact-main">
             <h2 id="contact-title">
-              Let’s build<br />something <em>useful.</em>
+              Let’s build<br />something <em>remarkable.</em>
             </h2>
             <div>
               <p>
@@ -640,7 +606,7 @@
                 systems delivery? Let’s talk.
               </p>
               <a
-                class="button button-lime"
+                class="button button-primary"
                 href="mailto:piyush.chopra201998@gmail.com"
                 >Start a conversation <span aria-hidden="true">↗</span></a
               ><button class="copy-email" type="button" hidden>
