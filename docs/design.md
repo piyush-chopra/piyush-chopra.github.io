@@ -82,3 +82,9 @@ Opaque fallback for reduced transparency, stronger boundaries for increased cont
 ## Verified result
 
 Local Chromium checks passed at 320, 390, 768, and 1440px, including 200% text reflow. Axe WCAG A/AA checks passed for desktop and mobile light appearances and desktop dark appearance. Filters, disclosures, theme persistence, clipboard, anchors, keyboard skip navigation, no-JS content, and 404 recovery passed. Reduced motion produced no running animations; reduced transparency and increased contrast removed navigation blur. Desktop hero and featured work, mobile hero/contact, dark appearance, and the social preview were inspected visually.
+
+## Frosted navigation refinement
+
+The floating header now uses a 28px backdrop blur, a 155% saturation boost, a diagonal specular wash, and narrow inset edge reflections. Its neutral fill is 70% white in light appearance and 76% graphite in dark appearance. This is a CSS approximation of frosted glass; it does not reproduce Apple's native adaptive material. The label layer stays crisp and small brand text uses the full foreground color to maintain contrast over changing backgrounds. No pointer tracking, refraction animation, or additional glass surfaces were added.
+
+References: `liquid-glass.md › Cross-platform translation` describes “Backdrop blur” and “hairline highlight”; `materials.md › Liquid Glass` says “Use Liquid Glass effects sparingly.” The opaque no-blur fallback remains for reduced transparency, increased contrast, and browsers without backdrop-filter support.

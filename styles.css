@@ -9,7 +9,11 @@
   --action: #0066cc;
   --accent: #673dcc;
   --line: #dcdce3;
-  --glass: rgb(255 255 255 / 88%);
+  --glass: rgb(255 255 255 / 70%);
+  --glass-edge: rgb(255 255 255 / 80%);
+  --glass-glint: rgb(255 255 255 / 58%);
+  --glass-wash: rgb(255 255 255 / 8%);
+  --glass-shadow: rgb(31 38 64 / 12%);
   --shadow: 0 12px 48px rgb(29 29 31 / 5%);
   --spectrum: conic-gradient(
     from 30deg,
@@ -35,7 +39,11 @@
     --action: #80b5ff;
     --accent: #bba5ff;
     --line: #363640;
-    --glass: rgb(23 23 29 / 90%);
+    --glass: rgb(23 23 29 / 76%);
+    --glass-edge: rgb(255 255 255 / 20%);
+    --glass-glint: rgb(255 255 255 / 10%);
+    --glass-wash: rgb(255 255 255 / 2%);
+    --glass-shadow: rgb(0 0 0 / 32%);
     --shadow: 0 12px 48px rgb(0 0 0 / 14%);
   }
 }
@@ -49,7 +57,11 @@
   --action: #80b5ff;
   --accent: #bba5ff;
   --line: #363640;
-  --glass: rgb(23 23 29 / 90%);
+  --glass: rgb(23 23 29 / 76%);
+  --glass-edge: rgb(255 255 255 / 20%);
+  --glass-glint: rgb(255 255 255 / 10%);
+  --glass-wash: rgb(255 255 255 / 2%);
+  --glass-shadow: rgb(0 0 0 / 32%);
   --shadow: 0 12px 48px rgb(0 0 0 / 14%);
 }
 * {
@@ -192,13 +204,44 @@ img {
   background: var(--surface);
   box-shadow: 0 8px 32px rgb(0 0 0 / 6%);
 }
-@supports (backdrop-filter: blur(20px)) {
+@supports (
+  (backdrop-filter: blur(28px)) or (-webkit-backdrop-filter: blur(28px))
+) {
   .site-header {
-    background: var(--glass);
-    backdrop-filter: blur(20px) saturate(150%);
-    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    background:
+      linear-gradient(
+        135deg,
+        var(--glass-glint),
+        transparent 42%,
+        var(--glass-wash)
+      ),
+      var(--glass);
+    border-color: var(--glass-edge);
+    backdrop-filter: blur(28px) saturate(155%);
+    -webkit-backdrop-filter: blur(28px) saturate(155%);
+    box-shadow:
+      0 12px 36px -12px var(--glass-shadow),
+      0 2px 8px -4px var(--glass-shadow),
+      inset 0 1px 0 var(--glass-glint),
+      inset 0 -1px 0 var(--glass-wash);
+  }
+  .site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    /* A narrow reflection at the rim, without distorting navigation labels. */
+    box-shadow:
+      inset 1px 0 0 var(--glass-glint),
+      inset -1px 0 0 var(--glass-wash);
   }
 }
+/* Small labels need full contrast over the changing content beneath the glass. */
+.site-header .brand-sub {
+  color: var(--ink);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -1483,8 +1526,17 @@ small,
 @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
   .site-header {
     background: var(--surface);
+    border-color: var(--line);
+    box-shadow: 0 8px 32px rgb(0 0 0 / 6%);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+  }
+}
+@media (prefers-reduced-transparency: reduce),
+  (prefers-contrast: more),
+  (forced-colors: active) {
+  .site-header::before {
+    display: none;
   }
 }
 @media (prefers-contrast: more) {
