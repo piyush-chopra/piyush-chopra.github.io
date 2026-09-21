@@ -1564,3 +1564,25 @@ small,
     display: none;
   }
 }
+
+/* The expanded resume collection reuses the project card and filter system. */
+.projects-count {
+  margin: -8px 0 24px;
+  color: var(--secondary);
+  font-size: 0.8125rem;
+}
+.project-card-summary {
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+.project-card-summary .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.project-card-summary .tag-list {
+  margin-bottom: 24px;
+}
+.project-card-summary details {
+  margin-top: auto;
+}

@@ -203,7 +203,7 @@
           </div>
         </article>
         <div class="projects-toolbar">
-          <h3>More engineering work</h3>
+          <h3>Explore my projects</h3>
           <div class="filters" role="group" aria-label="Filter projects" hidden>
             <button type="button" data-filter="all" aria-pressed="true">
               All work</button
@@ -215,13 +215,19 @@
           </div>
         </div>
         <p
-          class="sr-only"
+          class="projects-count"
           id="filter-status"
           role="status"
           aria-live="polite"
-        ></p>
+        >
+          18 projects shown. Foundry Office is featured above.
+        </p>
         <div class="project-grid">
-          <article class="project-card" data-category="platform">
+          <article
+            id="planetskool"
+            class="project-card"
+            data-category="platform"
+          >
             <div class="card-visual planet-visual" aria-hidden="true">
               <div class="planet-orbit orbit-outer"></div>
               <div class="planet-orbit orbit-inner"></div>
@@ -259,7 +265,7 @@
               </details>
             </div>
           </article>
-          <article class="project-card" data-category="ai">
+          <article id="tracemind" class="project-card" data-category="ai">
             <div class="card-visual trace-visual" aria-hidden="true">
               <div class="trace-line">
                 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
@@ -296,7 +302,11 @@
               </details>
             </div>
           </article>
-          <article class="project-card" data-category="platform">
+          <article
+            id="om-geofencing"
+            class="project-card"
+            data-category="platform"
+          >
             <div class="card-visual field-visual" aria-hidden="true">
               <div class="field-grid"></div>
               <div class="field-zone"><span></span></div>
@@ -330,7 +340,11 @@
               </details>
             </div>
           </article>
-          <article class="project-card compact-project" data-category="ai">
+          <article
+            id="gia"
+            class="project-card compact-project"
+            data-category="ai"
+          >
             <div class="card-visual document-visual" aria-hidden="true">
               <div class="document-sheet">
                 <span></span><span></span><span></span><span></span>
@@ -342,10 +356,10 @@
             </div>
             <div class="card-body">
               <p class="project-category">DOCUMENT INTELLIGENCE · GENTARI</p>
-              <h3>GIA & document agents</h3>
+              <h3>GIA · HR Policy Assistant</h3>
               <p>
-                Conversational HR policy retrieval, agreement analysis, and
-                reasoning across internal document repositories.
+                A conversational HR assistant helping employees retrieve and
+                reason over internal policies, with fewer repetitive queries.
               </p>
               <ul class="tag-list">
                 <li>AI agents</li>
@@ -357,10 +371,441 @@
                 </summary>
                 <div class="detail-content">
                   Designed and developed GIA, reducing repetitive HR queries and
-                  related communication workload by approximately 40%. Developed
-                  a PPA AI agent for Legal and Procurement, and an intranet
-                  document reviewer agent for searching and reasoning across
-                  enterprise documents. Source is not public.
+                  related communication workload by approximately 40%. Designed
+                  the assistant for conversational retrieval and reasoning over
+                  internal HR policies.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="hawkai"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">PROJECT INTELLIGENCE · GENTARI</p>
+              <h3>HawkAI · Project Intelligence</h3>
+              <p>
+                Daily construction progress calculated from PMO-defined task
+                weightages, reducing manual project reporting by approximately
+                55%.
+              </p>
+              <ul class="tag-list">
+                <li>Construction progress</li>
+                <li>Reporting</li>
+                <li>Automation</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed major modules for HawkAI, including Project
+                  Intelligence. The module turns weighted construction tasks
+                  into daily progress calculations to reduce manual reporting
+                  effort.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="chai-point"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">
+                RETAIL &amp; SUPPLY CHAIN · EXTERNAL PROJECT
+              </p>
+              <h3>Chai Point</h3>
+              <p>
+                A cross-platform retail and logistics application connecting
+                order tracking, store discovery, inventory, and fulfillment.
+              </p>
+              <ul class="tag-list">
+                <li>Flutter</li>
+                <li>Spring Boot</li>
+                <li>Firebase</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Engineered the Flutter application, integrated Firebase and
+                  mapping services for real-time order tracking and
+                  retail-location discovery, and developed and integrated Java
+                  Spring Boot REST services for inventory, fulfillment, and
+                  supply-chain workflows. Helped digitize manual logistics
+                  processes and synchronize data across stores.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="tms"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">ENTERPRISE SUPPORT · GENTARI</p>
+              <h3>TMS · Ticket Management</h3>
+              <p>
+                A centralized support platform that replaces fragmented email
+                workflows with structured ticket ownership, escalation, and
+                resolution.
+              </p>
+              <ul class="tag-list">
+                <li>Ticket workflows</li>
+                <li>Plugin architecture</li>
+                <li>Email ingestion</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Architected and developed ticket creation, assignment,
+                  tracking, commenting, escalation, auditing, and resolution.
+                  Designed plugin-based ingestion so enterprise applications and
+                  departmental email systems can integrate directly with TMS.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="ppa-agent"
+            data-category="ai"
+          >
+            <div class="card-body">
+              <p class="project-category">CONTRACT INTELLIGENCE · GENTARI</p>
+              <h3>PPA AI Agent</h3>
+              <p>
+                An agreement-analysis agent helping Legal and Procurement teams
+                reason through historical power purchase agreements and
+                contractual clauses.
+              </p>
+              <ul class="tag-list">
+                <li>AI agents</li>
+                <li>Contract reasoning</li>
+                <li>Decision support</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed the Power Purchase Agreement AI Agent to analyze
+                  historical agreements and reason over clauses, incorporating
+                  current financial and taxation context to support commercial
+                  decisions.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="dgr"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">SOLAR OPERATIONS · GENTARI</p>
+              <h3>Daily Generation Report</h3>
+              <p>
+                A reporting platform giving solar-plant teams centralized
+                visibility into device-level generation, downtime, and daily
+                operational hindrances.
+              </p>
+              <ul class="tag-list">
+                <li>Solar generation</li>
+                <li>Operational logs</li>
+                <li>Plant reporting</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed the DGR platform for recording device-level
+                  generation, operational logs, downtime, and hindrances,
+                  bringing daily plant-performance information into one place.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="travelex"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">
+                EMPLOYEE MOBILE EXPERIENCE · GENTARI
+              </p>
+              <h3>Travelex</h3>
+              <p>
+                A cross-platform employee application bringing expense claims,
+                travel pre-approvals, leave workflows, and digital business
+                cards together.
+              </p>
+              <ul class="tag-list">
+                <li>Mobile</li>
+                <li>Travel approvals</li>
+                <li>Employee workflows</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed the cross-platform mobile application and its
+                  employee workflows for expenses, travel, leave, and digital
+                  business cards.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="epm"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">PEOPLE OPERATIONS · GENTARI</p>
+              <h3>EPM · Feedback &amp; Promotions</h3>
+              <p>
+                A global 360-degree feedback and promotion-management platform
+                that reduced manual administration by approximately 60%.
+              </p>
+              <ul class="tag-list">
+                <li>360-degree feedback</li>
+                <li>Promotions</li>
+                <li>Workflow automation</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed the platform to support employee feedback and
+                  promotion management globally. Alongside reducing
+                  administrative work by approximately 60%, the implementation
+                  improved process productivity by approximately 75%, as
+                  reported in my resume.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="intranet-agent"
+            data-category="ai"
+          >
+            <div class="card-body">
+              <p class="project-category">ENTERPRISE KNOWLEDGE · GENTARI</p>
+              <h3>Intranet Document Reviewer</h3>
+              <p>
+                A document agent that searches, retrieves, and reasons across
+                internal repositories so employees can find information without
+                navigating folders manually.
+              </p>
+              <ul class="tag-list">
+                <li>Document intelligence</li>
+                <li>Search &amp; retrieval</li>
+                <li>AI agents</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Built the Enterprise Intranet Document Reviewer Agent to help
+                  employees locate specific information and reason across
+                  internal documents and large repositories.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="empower"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">EMPLOYEE SERVICES · GENTARI</p>
+              <h3>Empower</h3>
+              <p>
+                Configurable employee forms and connected support workflows
+                within the enterprise application ecosystem.
+              </p>
+              <ul class="tag-list">
+                <li>Configurable forms</li>
+                <li>Enterprise integrations</li>
+                <li>TMS</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed modules for Empower, including configurable employee
+                  forms and cross-application integration with the centralized
+                  Ticket Management System.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="energy-forecasting"
+            data-category="ai"
+          >
+            <div class="card-body">
+              <p class="project-category">PREDICTIVE ANALYTICS · GENTARI</p>
+              <h3>Renewable-energy forecasting</h3>
+              <p>
+                Weather and renewable-energy generation models that support
+                generation forecasting and operational planning.
+              </p>
+              <ul class="tag-list">
+                <li>Predictive modeling</li>
+                <li>Weather</li>
+                <li>Energy forecasting</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed predictive and forecasting models for weather and
+                  renewable-energy generation, supporting generation forecasting
+                  and operational planning.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="suno"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">
+                ACCESSIBLE EDUCATION · THINK FUTURE TECHNOLOGY
+              </p>
+              <h3>Suno</h3>
+              <p>
+                An education application designed to support students who are
+                deaf or hard of hearing.
+              </p>
+              <ul class="tag-list">
+                <li>Accessibility</li>
+                <li>Education</li>
+                <li>Application development</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Designed and developed Suno during my 2019 volunteer role at
+                  Think Future Technology. The work focused on an accessible
+                  education experience for hearing-impaired students.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="nebula"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">
+                REMOTE DESKTOP · THINK FUTURE TECHNOLOGY
+              </p>
+              <h3>Nebula</h3>
+              <p>
+                Contributions to a browser-based virtual machine and
+                remote-desktop platform.
+              </p>
+              <ul class="tag-list">
+                <li>Browser applications</li>
+                <li>Virtual machines</li>
+                <li>Remote desktop</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Contributed to Nebula during my 2019 volunteer role at Think
+                  Future Technology.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="namshi"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">
+                E-COMMERCE · THINK FUTURE TECHNOLOGY
+              </p>
+              <h3>Namshi</h3>
+              <p>
+                Bug fixes and performance improvements for a high-traffic
+                e-commerce platform serving the UAE.
+              </p>
+              <ul class="tag-list">
+                <li>E-commerce</li>
+                <li>Bug fixes</li>
+                <li>Performance</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Delivered critical bug fixes and performance optimizations
+                  during my 2019 volunteer role at Think Future Technology.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="project-card project-card-summary"
+            id="mbank"
+            data-category="platform"
+          >
+            <div class="card-body">
+              <p class="project-category">
+                BANKING PROTOTYPE · ALLSOFT SOLUTIONS
+              </p>
+              <h3>MBANK</h3>
+              <p>
+                An Android banking prototype with persistent local data, mobile
+                banking workflows, payment integrations, and maps.
+              </p>
+              <ul class="tag-list">
+                <li>Core Java</li>
+                <li>Android SDK</li>
+                <li>SQLite</li>
+              </ul>
+              <details>
+                <summary>
+                  My contribution <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed the functional prototype during my 2018 internship
+                  at Allsoft Solutions. Implemented banking workflows and local
+                  data management, integrating third-party payment gateways and
+                  Google Maps APIs. This was a prototype, not a publicly
+                  launched banking service.
                 </div>
               </details>
             </div>

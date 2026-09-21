@@ -32,6 +32,12 @@ Content remains readable and links work without JavaScript. Project filters and 
 
 GitHub Pages publishes the root of `main` in `piyush-chopra/piyush-chopra.github.io`. The `.nojekyll` file bypasses Jekyll. Push changes to `main` and wait for the Pages deployment to finish.
 
+## Project collection
+
+The featured Foundry Office project is followed by 18 resume-based project entries. The AI and platform filters cover the entire collection. Each entry describes Piyush's specific contribution; prototypes and contributions to existing products are identified explicitly. Approximate impact figures are taken from the resume, and technology tags are limited to what it supports for that project.
+
+Project preview links are supplied by Piyush. Do not infer a demo URL from a product name or link an enterprise project to an unrelated public product. Until a preview is supplied, the project remains a descriptive entry without a preview button.
+
 ## Updating content
 
 Edit the corresponding semantic section in `index.html`. Update social metadata and `assets/social-card.png` if the positioning changes. The source for the social card is in `scripts/social-card.html`.

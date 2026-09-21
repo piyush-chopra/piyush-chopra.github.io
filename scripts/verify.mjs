@@ -60,14 +60,37 @@ try {
   }
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.getByRole("button", { name: "AI systems", exact: true }).click();
-  if ((await page.locator(".project-card:visible").count()) !== 2)
+  if ((await page.locator(".project-card:visible").count()) !== 5)
     throw Error("AI filter failed");
   await page.getByRole("button", { name: "Platforms", exact: true }).click();
-  if ((await page.locator(".project-card:visible").count()) !== 2)
+  if ((await page.locator(".project-card:visible").count()) !== 13)
     throw Error("Platform filter failed");
   await page.getByRole("button", { name: "All work", exact: true }).click();
-  if ((await page.locator(".project-card:visible").count()) !== 4)
+  if ((await page.locator(".project-card:visible").count()) !== 18)
     throw Error("All filter failed");
+  const expectedProjects = [
+    "hawkai",
+    "chai-point",
+    "tms",
+    "ppa-agent",
+    "dgr",
+    "travelex",
+    "epm",
+    "intranet-agent",
+    "empower",
+    "energy-forecasting",
+    "suno",
+    "nebula",
+    "namshi",
+    "mbank",
+  ];
+  for (const id of expectedProjects) {
+    if (!(await page.locator(`#${id} h3`).isVisible()))
+      throw Error(`Resume project missing: ${id}`);
+  }
+  await page.locator("#tms summary").click();
+  if (!(await page.locator("#tms details").evaluate((el) => el.open)))
+    throw Error("New project contribution disclosure failed");
   await page.getByText("Architecture & contribution", { exact: false }).click();
   if (
     !(await page
